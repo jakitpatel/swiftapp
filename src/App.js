@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+//import SwiftParser from 'swift-parser';
+import inputText from './swiftMsgInput.js';
+
+var SwiftParser = require('swift-parser').SwiftParser;
 
 function App() {
+  var output;
+  var parser = new SwiftParser();
+  const swifttext = inputText;
+  parser.parse(swifttext, function(err, ast) {
+    console.log(err);
+    console.log("------------");
+    console.log(ast);
+    output = ast;
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <h1>Input : </h1>
+        <p>{swifttext}</p>
+        <br />
+        <h1>Output : </h1>
+        <p>{JSON.stringify(output)}</p>
+      </div>
     </div>
   );
 }
