@@ -36,6 +36,21 @@ const inputText = "{1:F01TESTBIC12XXX0360105154}{2:O5641057130214TESTBIC34XXX262
 ":11A::OPTN//USD\r\n"+
 ":17B::DFLT//Y\r\n"+
 ":16R:CASHMOVE\r\n"+
+":22H::CRDB//CRED\r\n"+
+":22H::CONT//ACTU\r\n"+
+":97A::CASH//89898\r\n"+
+":19B::ENTL//USD3333,\r\n"+
+":19B::TXFR//USD3333,\r\n"+
+":19B::NETT//USD3333,\r\n"+
+":98A::PAYD//20220214\r\n"+
+":98A::VALU//20220214\r\n"+
+":98A::EARL//20220214\r\n"+
+":92A::INTP//0,75\r\n"+
+":92A::TAXR//0,\r\n"+
+":16S:CASHMOVE\r\n"+
+":16S:CAOPTN\r\n"+
+":16R:ADDINFO\r\n"+
+":16S:ADDINFO\r\n"+
 "-}{5:{CHK:C77F8E009597}}";
 
 export default inputText ;
